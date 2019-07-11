@@ -12,3 +12,9 @@ variable "ssh_key_agent_version" {
   type        = "string"
   description = "The ssh-key-agent version"
 }
+
+variable "enabled" {
+  type        = "string"
+  default     = true
+  description = "Whether or not the service shall be enabled"
+}
