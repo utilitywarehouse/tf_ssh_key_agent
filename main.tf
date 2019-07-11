@@ -9,7 +9,7 @@ data "template_file" "ssh-key-agent" {
 }
 
 data "ignition_systemd_unit" "ssh-key-agent" {
-  name = "ssh-key-agent.service"
-
+  name    = "ssh-key-agent.service"
+  enabled = "${var.enabled}"
   content = "${data.template_file.ssh-key-agent.rendered}"
 }
