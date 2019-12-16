@@ -1,3 +1,7 @@
+terraform {
+  required_version = ">= 0.12"
+}
+
 data "template_file" "ssh-key-agent" {
   template = "${file("${path.module}/resources/ssh-key-agent.service")}"
 
